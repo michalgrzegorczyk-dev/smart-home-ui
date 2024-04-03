@@ -1,0 +1,113 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.card {
+  padding: 27px;
+  width: 210px;
+  border-radius: 30px;
+  display: grid;
+  gap: 10px;
+
+  .card__header {
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    gap: 10px;
+
+    .card__icon {
+      font-weight: var(--font-weight-bold);
+      height: 50px;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+    }
+
+    .card__settings {
+      display: flex;
+      position: relative;
+      padding: 10px;
+      top: -10px;
+      left: 10px;
+
+      path {
+        fill: var(--color-black);
+        opacity: 0.5;
+      }
+    }
+
+  }
+
+  .card__name-container {
+    .bolded-name {
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-medium);
+      margin-bottom: 5px;
+    }
+
+    .subtext-name {
+      font-weight: var(--font-weight-light);
+      font-size: var(--font-size-medium);
+    }
+  }
+}
+
+.card--inactive {
+  background-color: var(--color-dark-gray);
+
+  .card__icon {
+    background-color: var(--color-darker-gray);
+  }
+
+  .card__name-container {
+    color: var(--color-light-gray);
+  }
+}
+
+.card--sea-green {
+  background-color: #00FEB6;
+
+  .card__icon {
+    background-color: var(--color-white);
+  }
+}
+
+.card--violets-are-blue {
+  background-color: #825DFF;
+
+  .card__icon {
+    background-color: var(--color-white);
+  }
+
+  .card__name-container {
+    color: var(--color-white);
+  }
+}
+
+.card--azure {
+  background-color: #007BFF;
+
+  .card__icon {
+    background-color: var(--color-white);
+  }
+
+  .card__name-container {
+    color: var(--color-white);
+  }
+}
+
+.card--lemon-yellow {
+  background-color: #FFED48;
+
+  .card__icon {
+    background-color: var(--color-white);
+  }
+
+  .card__name-container {
+    color: var(--color-black);
+  }
+}

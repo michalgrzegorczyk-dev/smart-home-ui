@@ -1,0 +1,89 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-light-gray: #CCCCCC;
+  --color-gray: #808080;
+  --color-transparent-gray: #8080807F;
+  --color-transparent-light-gray: #8080803F;
+  --color-dark-gray: #232C37;
+  --color-darker-gray: #171C26;
+  --color-darkest-gray: #151618;
+  --color-black: #000000;
+
+  --font-size-large: 32px;
+  --font-size-medium: 16px;
+  --font-size-small: 14px;
+
+  --font-weight-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body, h2 {
+  margin: 0;
+}
+
+h2 {
+  color: var(--color-white);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 30px;
+}
+
+input {
+  margin: 0;
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--color-white);
+  border-bottom: 1px solid var(--color-light-gray);
+  padding: 8px 2px;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background: none;
+  cursor: pointer;
+  overflow: visible;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+select {
+  cursor: pointer;
+  background-color: var(--color-dark-gray);
+  font-size: var(--font-size-medium);
+  color: var(--color-white);
+  font-weight: var(--font-weight-light);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 38px 10px 17px;
+  outline: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23fff" d="M7 10l5 5 5-5z"/></svg>');
+  transition: .4s;
+
+  &:hover {
+    background-color: var(--color-gray);
+  }
+}
+
+
+.divider {
+  height: 1px;
+  background-color: var(--color-transparent-light-gray);
+}
