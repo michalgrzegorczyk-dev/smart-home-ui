@@ -1,10 +1,10 @@
 # smart-home-ui
 
 ## Todo
-- [ ] Kolorystyka
-- [ ] Fill SVG
-- [ ] Kolory ikon na hover
-- [ ] Toggle
+- [x] Kolorystyka
+- [x] Fill SVG
+- [x] Kolory ikon na hover
+- [x] Toggle
 - [ ] Struktura HTML
 - [ ] Modal
 - [ ] Refactor
