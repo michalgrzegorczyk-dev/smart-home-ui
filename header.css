@@ -1,40 +1,13 @@
 .main-header {
-  --gap: 12px;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: var(--gap);
-    color: var(--color-white);
-
-    button {
-      border: 1px solid var(--color-transparent-light-gray);
-      border-radius: 25px;
-      padding: 10px 17px;
-      font-size: var(--font-size-medium);
-      color: var(--color-white);
-      font-weight: var(--font-weight-light);
-      transition: .4s;
-    }
-
-    button:hover {
-      background-color: var(--color-gray);
-    }
-
-    button.active {
-      background-color: var(--color-white);
-      color: var(--color-black);
-    }
-  }
-
   .actions {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: var(--gap);
+    gap: 14px;
   }
 }

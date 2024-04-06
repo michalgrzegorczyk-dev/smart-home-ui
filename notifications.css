@@ -1,0 +1,110 @@
+.notifications {
+  display: grid;
+  gap: 20px;
+}
+
+.notification {
+  background-color: var(--color-dark-gray);
+  padding: 26px 18px;
+  border-radius: 21px;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 25px;
+
+  .notification__icon {
+    grid-column: 1;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg > path {
+      fill: var(--color-white);
+    }
+  }
+
+  .notification__icon--info {
+    background-color: var(--color-azure);
+  }
+
+  .notification__icon--warning {
+    background-color: var(--color-lemon-yellow);
+
+    svg > path {
+      fill: var(--color-black);
+    }
+  }
+
+  .notification__icon--error {
+    background-color: var(--color-error);
+
+    svg {
+      position: relative;
+      bottom: 2px;
+
+      & > path {
+        fill: var(--color-black);
+      }
+    }
+  }
+
+  .notification__name-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-column: 2;
+
+    p {
+      margin: 0;
+      color: var(--color-white);
+
+      &:first-of-type {
+        font-weight: var(--font-weight-medium);
+
+        span {
+          margin-left: 6px;
+          font-weight: var(--font-weight-light);
+          color: var(--color-transparent-gray);
+        }
+      }
+
+      &:last-of-type {
+        font-weight: var(--font-weight-light);
+      }
+    }
+  }
+
+
+  .notification__timestamp {
+    grid-column: 3;
+    font-weight: var(--font-weight-light);
+    color: var(--color-transparent-gray);
+    position: relative;
+    left: 20px;
+  }
+
+  .notification__settings {
+    grid-column: 4;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    left: 10px;
+
+    svg > path {
+      fill: var(--color-transparent-gray);
+      transition: var(--transition);
+    }
+
+    &:hover {
+      svg > path {
+        fill: var(--color-light-gray);
+      }
+    }
+  }
+
+}

@@ -12,7 +12,7 @@
     .navigation__item {
       cursor: pointer;
       position: relative;
-      padding: 10px 0;
+      padding: 12px 0;
       display: grid;
       align-items: center;
       gap: 20px;
@@ -21,6 +21,9 @@
       grid-template-columns: 16px auto;
       color: var(--color-white);
 
+      svg > path {
+        fill: var(--color-white);
+      }
 
       &::before {
         border-radius: 60px;
@@ -31,12 +34,16 @@
         width: calc(100% + 36px);
         height: 100%;
         z-index: -1;
-        transition: background-color 0.4s;
+        transition: background-color var(--transition);;
       }
     }
 
     .navigation__item--active {
       color: var(--color-black);
+
+      svg > path {
+        fill: var(--color-black);
+      }
 
       &::before {
         background-color: var(--color-white);
@@ -78,6 +85,17 @@
       padding: 10px;
       position: relative;
       left: 10px;
+
+      svg > path {
+        transition: var(--transition);
+        fill: var(--color-white);
+      }
+
+      &:hover {
+        svg > path {
+          fill: var(--color-light-gray);
+        }
+      }
     }
   }
 }
@@ -94,5 +112,10 @@
     height: 50px;
     width: 50px;
     cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+      background-color: var(--color-darker-gray);
+    }
   }
 }

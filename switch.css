@@ -1,13 +1,18 @@
 .switch {
   position: relative;
-  display: inline-block;
-  width: 74px;
-}
+  width: 80px;
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+  & > input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &:hover {
+    .slider {
+      background-color: var(--color-gray);
+    }
+  }
 }
 
 .slider {
@@ -16,12 +21,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: var(--color-dark-gray);
-  transition: .4s;
+  transition: var(--transition);
 
   svg {
     width: 16px;
@@ -30,56 +32,57 @@
 
   svg:first-of-type {
     position: relative;
-    left: 10px;
+    left: 12px;
   }
 
   svg:last-of-type {
     position: relative;
     right: 12px;
   }
-}
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 34px;
-  width: 38px;
-  background-color: white;
-  transition: .4s;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 38px;
+    width: 38px;
+    background-color: var(--color-white);
+    transition: var(--transition);
+  }
 }
 
 input:checked + .slider {
-    svg:first-of-type > path {
-      fill: white;
-      transition: .4s;
-    }
+  svg:first-of-type > path {
+    fill: var(--color-white);
+    transition: var(--transition);
+  }
 
-    svg:last-of-type > path {
-    fill: black;
-    transition: .4s;
+  svg:last-of-type > path {
+    fill: var(--color-black);
+    transition: var(--transition);
   }
 }
 
 input:not(:checked) + .slider {
   svg:first-of-type > path {
-    fill: black;
-    transition: .4s;
+    fill: var(--color-black);
+    transition: var(--transition);
   }
+
   svg:last-of-type > path {
-    fill: white;
-    transition: .4s;
+    fill: var(--color-white);
+    transition: var(--transition);
   }
 }
 
 input:checked + .slider:before {
-  transform: translateX(35px);
+  transform: translateX(38px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 47%;
+  left: 2px;
+  border-radius: 50%;
 }

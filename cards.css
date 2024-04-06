@@ -28,6 +28,7 @@
     }
 
     .card__settings {
+      height: fit-content;
       display: flex;
       position: relative;
       padding: 10px;
@@ -37,6 +38,13 @@
       path {
         fill: var(--color-black);
         opacity: 0.5;
+        transition: var(--transition);
+      }
+
+      &:hover {
+        path {
+          opacity: 0.7;
+        }
       }
     }
 
@@ -61,7 +69,12 @@
 
   .card__icon {
     background-color: var(--color-darker-gray);
+
+    svg > path {
+      fill: var(--color-light-gray);
+    }
   }
+
 
   .card__name-container {
     color: var(--color-light-gray);
@@ -69,7 +82,7 @@
 }
 
 .card--sea-green {
-  background-color: #00FEB6;
+  background-color: var(--color-sea-green);
 
   .card__icon {
     background-color: var(--color-white);
@@ -77,10 +90,14 @@
 }
 
 .card--violets-are-blue {
-  background-color: #825DFF;
+  background-color: var(--color-violets-are-blue);
 
   .card__icon {
     background-color: var(--color-white);
+
+    path {
+      fill: var(--color-violets-are-blue);;
+    }
   }
 
   .card__name-container {
@@ -89,10 +106,14 @@
 }
 
 .card--azure {
-  background-color: #007BFF;
+  background-color: var(--color-azure);
 
   .card__icon {
     background-color: var(--color-white);
+
+    path {
+      fill: var(--color-azure);
+    }
   }
 
   .card__name-container {
@@ -101,10 +122,14 @@
 }
 
 .card--lemon-yellow {
-  background-color: #FFED48;
+  background-color: var(--color-lemon-yellow);
 
   .card__icon {
     background-color: var(--color-white);
+
+    path {
+      fill: var(--color-black);
+    }
   }
 
   .card__name-container {
