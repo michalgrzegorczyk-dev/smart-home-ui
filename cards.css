@@ -38,7 +38,7 @@
       path {
         fill: var(--color-black);
         opacity: 0.5;
-        transition: var(--transition);
+        transition: var(--transition-time);
       }
 
       &:hover {
@@ -65,19 +65,19 @@
 }
 
 .card--inactive {
-  background-color: var(--color-dark-gray);
+  background-color: var(--color-gray-medium);
 
   .card__icon {
-    background-color: var(--color-darker-gray);
+    background-color: var(--color-gray-dark);
 
     svg > path {
-      fill: var(--color-light-gray);
+      fill: var(--color-gray-lightest);
     }
   }
 
 
   .card__name-container {
-    color: var(--color-light-gray);
+    color: var(--color-gray-lightest);
   }
 }
 

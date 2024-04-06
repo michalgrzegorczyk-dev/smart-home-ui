@@ -34,7 +34,7 @@
         width: calc(100% + 36px);
         height: 100%;
         z-index: -1;
-        transition: background-color var(--transition);;
+        transition: background-color var(--transition-time);;
       }
     }
 
@@ -78,7 +78,7 @@
     .rooms__title {
       font-size: var(--font-size-small);
       margin-bottom: 10px;
-      color: var(--color-transparent-gray);
+      color: var(--color-gray-lighter);
     }
 
     .rooms__button {
@@ -87,13 +87,13 @@
       left: 10px;
 
       svg > path {
-        transition: var(--transition);
+        transition: var(--transition-time);
         fill: var(--color-white);
       }
 
       &:hover {
         svg > path {
-          fill: var(--color-light-gray);
+          fill: var(--color-gray-lightest);
         }
       }
     }
@@ -106,16 +106,16 @@
   justify-content: center;
 
   .actions__button {
-    background-color: var(--color-darkest-gray);
+    background-color: var(--color-gray-darkest);
     border-radius: 100%;
     color: var(--color-white);
     height: 50px;
     width: 50px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transition-time);
 
     &:hover {
-      background-color: var(--color-darker-gray);
+      background-color: var(--color-gray-dark);
     }
   }
 }

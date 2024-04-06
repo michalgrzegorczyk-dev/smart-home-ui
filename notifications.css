@@ -4,7 +4,7 @@
 }
 
 .notification {
-  background-color: var(--color-dark-gray);
+  background-color: var(--color-gray-medium);
   padding: 26px 18px;
   border-radius: 21px;
   display: grid;
@@ -67,7 +67,7 @@
         span {
           margin-left: 6px;
           font-weight: var(--font-weight-light);
-          color: var(--color-transparent-gray);
+          color: var(--color-gray-lighter);
         }
       }
 
@@ -81,7 +81,7 @@
   .notification__timestamp {
     grid-column: 3;
     font-weight: var(--font-weight-light);
-    color: var(--color-transparent-gray);
+    color: var(--color-gray-lighter);
     position: relative;
     left: 20px;
   }
@@ -96,13 +96,13 @@
     left: 10px;
 
     svg > path {
-      fill: var(--color-transparent-gray);
-      transition: var(--transition);
+      fill: var(--color-gray-lighter);
+      transition: var(--transition-time);
     }
 
     &:hover {
       svg > path {
-        fill: var(--color-light-gray);
+        fill: var(--color-gray-lightest);
       }
     }
   }

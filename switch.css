@@ -22,8 +22,8 @@
   justify-content: space-between;
   align-items: center;
   inset: 0;
-  background-color: var(--color-dark-gray);
-  transition: var(--transition);
+  background-color: var(--color-gray-medium);
+  transition: var(--transition-time);
 
   svg {
     width: 16px;
@@ -46,31 +46,31 @@
     height: 38px;
     width: 38px;
     background-color: var(--color-white);
-    transition: var(--transition);
+    transition: var(--transition-time);
   }
 }
 
 input:checked + .slider {
   svg:first-of-type > path {
     fill: var(--color-white);
-    transition: var(--transition);
+    transition: var(--transition-time);
   }
 
   svg:last-of-type > path {
     fill: var(--color-black);
-    transition: var(--transition);
+    transition: var(--transition-time);
   }
 }
 
 input:not(:checked) + .slider {
   svg:first-of-type > path {
     fill: var(--color-black);
-    transition: var(--transition);
+    transition: var(--transition-time);
   }
 
   svg:last-of-type > path {
     fill: var(--color-white);
-    transition: var(--transition);
+    transition: var(--transition-time);
   }
 }
 

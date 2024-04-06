@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <link rel="stylesheet" href="steps-navigation.css">
   <link rel="stylesheet" href="tags.css">
+  <link rel="stylesheet" href="modal-content.css">
+  <link rel="stylesheet" href="divider.css">
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="switch.css">
+  <link rel="stylesheet" href="range-slider.css">
   <link rel="stylesheet" href="cards.css">
   <link rel="stylesheet" href="sidebar.css">
   <link rel="stylesheet" href="default.css">
@@ -407,8 +411,8 @@
   </main>
 </div>
 <div class="modal-container">
-  <div class="modal">
-    <div class="modal__header">
+  <div class="modal modal-content">
+    <div class="modal-content__header">
       <div class="header__icon">
         <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -416,8 +420,8 @@
         </svg>
       </div>
       <div class="header__name-container">
-        <div class="bolded-name">Air Purifier</div>
-        <div class="subtext-name">Living room</div>
+        <div class="bolded-name">Smart Light</div>
+        <div class="subtext-name">On</div>
       </div>
       <div class="header__actions">
         <button>
@@ -435,7 +439,7 @@
       </div>
     </div>
 
-    <div class="modal__color-picker">
+    <div class="modal-content__color-picker">
       <div class="color-picker-container">
         <div class="color-picker__button">
           <button>
@@ -452,14 +456,19 @@
       </div>
     </div>
 
-    <div class="modal__brightness">
-      <div class="modal__brightness__slider">
-        <input type="range" min="1" max="100" value="50">
-      </div>
+    <div class="modal-content__brightness">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 3V0H12V3H10ZM10 22V19H12V22H10ZM19 12V10H22V12H19ZM0 12V10H3V12H0ZM17.7 5.7L16.3 4.3L18.05 2.5L19.5 3.95L17.7 5.7ZM3.95 19.5L2.5 18.05L4.3 16.3L5.7 17.7L3.95 19.5ZM18.05 19.5L16.3 17.7L17.7 16.3L19.5 18.05L18.05 19.5ZM4.3 5.7L2.5 3.95L3.95 2.5L5.7 4.3L4.3 5.7ZM11 17C9.33333 17 7.91667 16.4167 6.75 15.25C5.58333 14.0833 5 12.6667 5 11C5 9.33333 5.58333 7.91667 6.75 6.75C7.91667 5.58333 9.33333 5 11 5C12.6667 5 14.0833 5.58333 15.25 6.75C16.4167 7.91667 17 9.33333 17 11C17 12.6667 16.4167 14.0833 15.25 15.25C14.0833 16.4167 12.6667 17 11 17ZM11 15C12.1167 15 13.0625 14.6125 13.8375 13.8375C14.6125 13.0625 15 12.1167 15 11C15 9.88333 14.6125 8.9375 13.8375 8.1625C13.0625 7.3875 12.1167 7 11 7C9.88333 7 8.9375 7.3875 8.1625 8.1625C7.3875 8.9375 7 9.88333 7 11C7 12.1167 7.3875 13.0625 8.1625 13.8375C8.9375 14.6125 9.88333 15 11 15Z" />
+      </svg>
+      <input class="range-slider" type="range" min="1" max="100" value="0">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.6663 4.33301V0.333008H16.333V4.33301H13.6663ZM13.6663 29.6663V25.6663H16.333V29.6663H13.6663ZM25.6663 16.333V13.6663H29.6663V16.333H25.6663ZM0.333008 16.333V13.6663H4.33301V16.333H0.333008ZM23.933 7.93301L22.0663 6.06634L24.3997 3.66634L26.333 5.59967L23.933 7.93301ZM5.59967 26.333L3.66634 24.3997L6.06634 22.0663L7.93301 23.933L5.59967 26.333ZM24.3997 26.333L22.0663 23.933L23.933 22.0663L26.333 24.3997L24.3997 26.333ZM6.06634 7.93301L3.66634 5.59967L5.59967 3.66634L7.93301 6.06634L6.06634 7.93301ZM14.9997 22.9997C12.7775 22.9997 10.8886 22.2219 9.33301 20.6663C7.77745 19.1108 6.99967 17.2219 6.99967 14.9997C6.99967 12.7775 7.77745 10.8886 9.33301 9.33301C10.8886 7.77745 12.7775 6.99967 14.9997 6.99967C17.2219 6.99967 19.1108 7.77745 20.6663 9.33301C22.2219 10.8886 22.9997 12.7775 22.9997 14.9997C22.9997 17.2219 22.2219 19.1108 20.6663 20.6663C19.1108 22.2219 17.2219 22.9997 14.9997 22.9997ZM14.9997 20.333C16.4886 20.333 17.7497 19.8163 18.783 18.783C19.8163 17.7497 20.333 16.4886 20.333 14.9997C20.333 13.5108 19.8163 12.2497 18.783 11.2163C17.7497 10.183 16.4886 9.66634 14.9997 9.66634C13.5108 9.66634 12.2497 10.183 11.2163 11.2163C10.183 12.2497 9.66634 13.5108 9.66634 14.9997C9.66634 16.4886 10.183 17.7497 11.2163 18.783C12.2497 19.8163 13.5108 20.333 14.9997 20.333Z" />
+      </svg>
+
     </div>
 
 
-    <div class="modal__actions">
+    <div class="modal-content__actions">
       <div class="modal__rooms">
         <p>Room</p>
         <select>
@@ -484,20 +493,30 @@
     </div>
 
 
-    <div class="modal__steps">
-      <button class="step__left">
+    <div class="steps-navigation">
+      <button class="step-navigation__previous">
         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6.66667 13.6667L0 7L6.66667 0.333336L7.85 1.51667L2.36667 7L7.85 12.4833L6.66667 13.6667Z" />
         </svg>
       </button>
-      <ul class="step__navigation">
-        <li><button></button></li>
-        <li><button></button></li>
-        <li><button></button></li>
-        <li><button></button></li>
-        <li><button></button></li>
+      <ul class="step-navigation__dots">
+        <li>
+          <button></button>
+        </li>
+        <li>
+          <button></button>
+        </li>
+        <li>
+          <button></button>
+        </li>
+        <li>
+          <button></button>
+        </li>
+        <li>
+          <button></button>
+        </li>
       </ul>
-      <button class="step__right">
+      <button class="step-navigation__next">
         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.33334 0.333331L8 7L1.33333 13.6667L0.15 12.4833L5.63333 7L0.150001 1.51666L1.33334 0.333331Z" />
         </svg>

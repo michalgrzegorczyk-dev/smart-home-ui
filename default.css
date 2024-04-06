@@ -1,12 +1,12 @@
 :root {
   --color-white: #FFFFFF;
-  --color-light-gray: #CCCCCC;
-  --color-transparent-gray: #8080807F;
-  --color-transparent-light-gray: #8080803F;
+  --color-gray-lightest: #CCCCCC;
+  --color-gray-lighter: #8080807F;
+  --color-gray-light: #8080803F;
   --color-gray: #39414b;
-  --color-dark-gray: #232C37;
-  --color-darker-gray: #171C26;
-  --color-darkest-gray: #151618;
+  --color-gray-medium: #232C37;
+  --color-gray-dark: #171C26;
+  --color-gray-darkest: #151618;
   --color-black: #111622;
 
   --color-sea-green: #00FEB6;
@@ -24,7 +24,7 @@
   --font-weight-normal: 400;
   --font-weight-light: 300;
 
-  --transition: .4s;
+  --transition-time: .4s;
 }
 
 * {
@@ -49,7 +49,7 @@ input {
   outline: none;
   background: none;
   color: var(--color-white);
-  border-bottom: 1px solid var(--color-light-gray);
+  border-bottom: 1px solid var(--color-gray-lightest);
   padding: 8px 2px;
 }
 
@@ -71,7 +71,7 @@ ul {
 
 select {
   cursor: pointer;
-  background-color: var(--color-dark-gray);
+  background-color: var(--color-gray-medium);
   font-size: var(--font-size-medium);
   color: var(--color-white);
   font-weight: var(--font-weight-light);
@@ -83,14 +83,9 @@ select {
   background-repeat: no-repeat;
   background-position: right 5px center;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23fff" d="M7 10l5 5 5-5z"/></svg>');
-  transition: var(--transition);
+  transition: var(--transition-time);
 
   &:hover {
     background-color: var(--color-gray);
   }
-}
-
-.divider {
-  height: 1px;
-  background-color: var(--color-transparent-light-gray);
 }

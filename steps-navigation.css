@@ -1,0 +1,38 @@
+.steps-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .step-navigation__previous, .step-navigation__next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gray-lighter);
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+
+    svg path {
+      fill: var(--color-white);
+    }
+  }
+
+  .step-navigation__previous {
+    svg {
+      position: relative;
+      right: 1px;
+    }
+  }
+
+  .step-navigation__dots {
+    display: flex;
+    gap: 8px;
+
+    button {
+      width: 10px;
+      height: 10px;
+      background-color: var(--color-gray-lighter);
+      border-radius: 100%;
+    }
+  }
+}
